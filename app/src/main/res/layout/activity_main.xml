@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/aVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Android Version"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/aCodeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Android Code Name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/addAndroidVersionBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:onClick="addAndroidVersion"/>
+
+        <TableLayout
+            android:id="@+id/androidTypesTable"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFC0CB">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:layout_span="1"
+                    android:text="Version"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:text="Code Name"
+                    android:textAlignment="center"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/headerRow"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/firstColumn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:layout_span="1"
+                    android:text="Android 9.0"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:id="@+id/secondColumn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:layout_span="1"
+                    android:text="Pie"
+                    android:textAlignment="center"/>
+            </TableRow>
+            <TableRow android:padding="5dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:layout_span="1"
+                    android:text="Android 8.0"
+                    android:textAlignment="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="1dp"
+                    android:layout_span="1"
+                    android:text="Oreo"
+                    android:textAlignment="center"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
